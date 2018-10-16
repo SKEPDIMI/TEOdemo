@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { StackNavigator, createBottomTabNavigator } from 'react-navigation';
+import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import Home from './src/views/Home';
 import Tips from './src/views/Tips';
@@ -63,7 +63,7 @@ const tabNavigation = createBottomTabNavigator(
   }
 );
 
-export default StackNavigator({
+export default createStackNavigator({
   TipsAndTricks: TipsAndTricks,
   tabNavigation: tabNavigation,
 }, {
