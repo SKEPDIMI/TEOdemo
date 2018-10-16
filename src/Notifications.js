@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { Icon } from 'react-native-elements';
 
-export default class Home extends Component {
+export default class Notifications extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome Home! </Text>
+        <Text style={styles.welcome}>Welcome Notifications! </Text>
       </View>
     );
   }
