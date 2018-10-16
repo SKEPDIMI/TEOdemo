@@ -25,7 +25,7 @@ export default class Tips extends Component {
           iconRight={{
             name: 'chevron-right'
           }}
-          onPress={() => this.props.navigation.navigate('TipsAndTricks')}
+          onPress={() => this.props.navigation.push('TipsAndTricks')}
         />
       </View>
     );
