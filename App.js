@@ -1,30 +1,33 @@
 import React, { Component } from 'react';
-import { StyleSheet } from 'react-native';
-import { createBottomTabNavigator } from 'react-navigation';
+import { StyleSheet, View } from 'react-native';
+import { StackNavigator, createBottomTabNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
-import Home from './src/Home';
-import Sessions from './src/Sessions';
-import Search from './src/Search';
-import Notifications from './src/Notifications';
-import Account from './src/Account';
+import Home from './src/views/Home';
+import Tips from './src/views/Tips';
+import Search from './src/views/Search';
+import Notifications from './src/views/Notifications';
+import Account from './src/views/Account';
+import BottomTabBar from './src/components/BottomTabBar';
+import TipsAndTricks from './src/views/TipsAndTricks';
 
-export default createBottomTabNavigator(
+const tabNavigation = createBottomTabNavigator(
   {
     Home: Home,
-    Sessions: Sessions,
-    Search: Search,
+    Tips: Tips,
+    Search: { screen: Search, navigationOptions: { title: '' } },
     Notifications: Notifications,
     Account: Account
   },
   {
     navigationOptions: ({ navigation }) => ({
+      tabBarComponent: props => <BottomTabBar {...props} />,
       tabBarIcon: ({ focused, horizontal, tintColor }) => {
         const { routeName } = navigation.state;
         let iconName;
 
         if (routeName == 'Home') {
           iconName ='home'
-        } else if (routeName == 'Sessions') {
+        } else if (routeName == 'Tips') {
           iconName ='chat-bubble'
         } else if (routeName == 'Search') {
           iconName ='search'
@@ -47,6 +50,14 @@ export default createBottomTabNavigator(
     },
   }
 );
+
+export default StackNavigator({
+  TipsAndTricks: TipsAndTricks,
+  tabNavigation: tabNavigation,
+}, {
+  initialRouteName: 'tabNavigation',
+  navigationOptions: { header: null } 
+});
 
 const styles = StyleSheet.create({
   container: {
