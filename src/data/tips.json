@@ -1,18 +1,18 @@
 [
   {
     "title": "#morningTEO",
-    "description": "Lorem ipsum dolor sit amet, postea qualisque sententiae vis te, vel meliore expetendis mediocritatem ei",
+    "description": "Como parte del equipo de TEO lo alentaremos a ir a una cafetería local y trabajar desde allí (Nosotros pagamos el café)!",
     "author": {
-      "image": "https://avatars0.githubusercontent.com/u/30275860?s=460&v=4",
-      "description": "Lorem ipsum dolor sit amet, postea qualisque sententiae vis te, vel meliore expetendis mediocritatem ei"
+      "image": "http://flyy.tech/training/images/team1.jpg",
+      "description": "Martin Haiek es el diseñador y desarrollador principal de nuestro equipo. Lorem ipsum dolor sit amet, postea qualisque sententiae vis te, vel meliore expetendis mediocritatem ei."
     }
   },
   {
-    "title": "#morningTEO",
-    "description": "Lorem ipsum dolor sit amet, postea qualisque sententiae vis te, vel meliore expetendis mediocritatem ei",
+    "title": "#fullstackTEO",
+    "description": "Lorem ipsum dolor sit amet, postea qualisque sendis mediocritatem ei saperet adversarium vix ut, detraxit postulant duo",
     "author": {
       "image": "https://avatars0.githubusercontent.com/u/30275860?s=460&v=4",
-      "description": "Lorem ipsum dolor sit amet, postea qualisque sententiae vis te, vel meliore expetendis mediocritatem ei"
+      "description": "Jonathan Diaz es un desarrollador fullstack trabajando en projectos alrededor del mundo. Lorem ipsum dolor sit amet, postea qualisque sententiae vis te, vel meliore expetendis mediocritatem ei"
     }
   }
 ]
