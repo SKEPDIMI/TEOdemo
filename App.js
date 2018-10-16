@@ -30,7 +30,19 @@ const tabNavigation = createBottomTabNavigator(
         } else if (routeName == 'Tips') {
           iconName ='chat-bubble'
         } else if (routeName == 'Search') {
-          iconName ='search'
+          return <Icon name='search' containerStyle={{
+            backgroundColor: '#00D0D2',
+            position: 'relative',
+            bottom: 10,
+            borderRadius: 15,
+            shadowColor: 'grey',
+            shadowOpacity: 0.2,
+            shadowOffset: { width: 0, height: -5 },
+          }} iconStyle={{
+            color: 'white'
+          }}
+          reverse
+          size={29}/>
         } else if (routeName == 'Notifications') {
           iconName ='notifications'
         } else if (routeName == 'Account') {
