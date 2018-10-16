@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
 import { Text, Header, Icon } from 'react-native-elements';
 import {widthPercentageToDP as vw, heightPercentageToDP as vh} from 'react-native-responsive-screen';
+import Carousel from '../components/Carousel';
+import myTips from '../data/tips.json';
 
 export default class TipsAndTricks extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      currentIndex: 0,
+    };
+  };
   render() {
     return (
       <ScrollView style={StyleSheet.mainContainer}>
@@ -18,7 +26,13 @@ export default class TipsAndTricks extends Component {
           <View
             style={styles.carouselContainer}
           >
-
+            <Carousel
+              data={myTips}
+              index={this.state.currentIndex}
+              onIndexChange={index =>
+                this.setState(() => ({ currentIndex: index }))
+              }
+            />
           </View>
         </View>
         <View
@@ -43,8 +57,9 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   carouselContainer: {
-    padding: 20,
     flex: 1,
+    paddingTop: 20,
+    paddingBottom: 20
   },
   intro: {
     minHeight: vh('63%'),
